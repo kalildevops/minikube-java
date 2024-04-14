@@ -1,0 +1,4 @@
+apiVersion: v2
+name: java-springboot
+description: A Helm chart to deploy simple Java Spring Boot app
+version: 0.0.1

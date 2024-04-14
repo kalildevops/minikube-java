@@ -1,0 +1,24 @@
+# General
+namespace: java-apps
+name: java-springboot
+replicaCount: 2
+# Service
+service:
+  type: NodePort
+  port: 8080
+  targetPort: 8080
+# Deployment
+deployment:
+  docker_hub: kalildevops
+  image: java-springboot-multipath
+  tag: latest
+  containerPort: 8080
+# Ingress
+ingress:
+  # host: localhost
+  service_port: 80
+
+
+
+
+
