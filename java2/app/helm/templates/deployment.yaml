@@ -18,3 +18,7 @@ spec:
         image: {{ .Values.deployment.docker_hub }}/{{ .Values.deployment.image }}:{{ .Values.deployment.tag }}
         ports:
           - containerPort: {{ .Values.deployment.containerPort }}
+        resources:
+          limits:
+            cpu: {{ .Values.deployment.cpu }}
+            memory: {{ .Values.deployment.memory }}
