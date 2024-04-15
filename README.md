@@ -2,21 +2,16 @@
 
 ## Build locally
 
-### Create project
-```bash
-mvn archetype:generate -DgroupId=com.example.app -DartifactId=app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-```
-
 ### Build using Maven
 ```bash
 cd app
-mvn clean package
+./mvnw clean package
 ```
 
 ### Run using Maven
 ```bash
 cd app
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
 
 ## Docker
@@ -59,3 +54,16 @@ helm uninstall java-springboot --kube-context minikube
 ```bash
 kubectl logs -f <pod_name> -n java-apps
 ```
+
+## Testing
+
+Open terminal to get URL
+```bash
+minikube service java-springboot-service -n java-apps --url
+```
+
+Example, if you get http://127.0.0.1:57165  as result, you can open in your browser http://127.0.0.1:57165 or http://localhost:57165 and test your paths
+
+http://localhost:57165/path1
+http://localhost:57165/path2
+http://localhost:57165/path3
