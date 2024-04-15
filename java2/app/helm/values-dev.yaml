@@ -11,7 +11,7 @@ ingress:
 service:
   type: NodePort
   port: 8080
-  targetPort: http
+  targetPort: 8080
 # Deployment
 deployment:
   docker_hub: kalildevops

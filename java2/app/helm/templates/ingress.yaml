@@ -18,17 +18,17 @@ spec:
                 name: {{ .Values.name }}-service
                 port:
                   number: {{ .Values.ingress.service_port }}
-          # - path: /path2
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: {{ .Values.name }}-service
-          #       port:
-          #         number: {{ .Values.ingress.service_port }}
-          # - path: /path3
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: {{ .Values.name }}-service
-          #       port:
-          #         number: {{ .Values.ingress.service_port }}
+          - path: /path2
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.name }}-service
+                port:
+                  number: {{ .Values.ingress.service_port }}
+          - path: /path3
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.name }}-service
+                port:
+                  number: {{ .Values.ingress.service_port }}
