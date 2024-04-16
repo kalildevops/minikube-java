@@ -1,8 +1,6 @@
 # General
 namespace: java-apps
 name: java-springboot
-replicaCount: 2
-
 # Ingress
 ingress:
   host: localhost
@@ -14,12 +12,18 @@ service:
   targetPort: 8080
 # Deployment
 deployment:
+  replicaCount: 2
   docker_hub: kalildevops
   image: java-springboot-multipath
   tag: latest
   containerPort: 8080
-  cpu: "0.5"
-  memory: "512Mi"
+  cpu: "0.2"
+  memory: "200Mi"
+# HPA
+hpa:
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 5
 
 
 
